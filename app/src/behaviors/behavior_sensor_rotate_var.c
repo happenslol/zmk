@@ -45,7 +45,7 @@ static int on_sensor_binding_triggered(struct zmk_behavior_binding *binding,
         return -ENOTSUP;
     }
 
-    LOG_DBG("Sensor binding: %s", log_strdup(binding->behavior_dev));
+    LOG_DBG("Sensor binding: %s", binding->behavior_dev);
 
     zmk_behavior_queue_add(0, triggered_binding, true, cfg->tap_ms);
     zmk_behavior_queue_add(0, triggered_binding, false, 0);

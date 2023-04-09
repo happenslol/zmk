@@ -4,6 +4,7 @@
  * SPDX-License-Identifier: MIT
  */
 
+#include <zephyr/kernel.h>
 #include <zephyr/device.h>
 #include <zephyr/devicetree.h>
 #include <zephyr/settings/settings.h>
@@ -20,12 +21,10 @@ LOG_MODULE_REGISTER(zmk, CONFIG_ZMK_LOG_LEVEL);
 #include <zmk/mouse.h>
 #endif /* CONFIG_ZMK_MOUSE */
 
-#define ZMK_KSCAN_DEV DT_LABEL(ZMK_MATRIX_NODE_ID)
-
 void main(void) {
     LOG_INF("Welcome to ZMK!\n");
 
-    if (zmk_kscan_init(ZMK_KSCAN_DEV) != 0) {
+    if (zmk_kscan_init(DEVICE_DT_GET(ZMK_MATRIX_NODE_ID)) != 0) {
         return;
     }
 

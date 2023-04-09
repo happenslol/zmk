@@ -14,8 +14,8 @@
 
 #include <zephyr/kernel.h>
 #include <zephyr/device.h>
-#include <init.h>
-#include <sys/byteorder.h>
+#include <zephyr/init.h>
+#include <zephyr/sys/byteorder.h>
 #include <drivers/gpio.h>
 #include <drivers/i2c.h>
 #include <drivers/ext_power.h>

@@ -7,11 +7,12 @@
 #include <zephyr/types.h>
 
 #include <zephyr/bluetooth/bluetooth.h>
-#include <bluetooth/conn.h>
-#include <bluetooth/uuid.h>
-#include <bluetooth/gatt.h>
-#include <bluetooth/hci.h>
-#include <sys/byteorder.h>
+#include <zephyr/bluetooth/conn.h>
+#include <zephyr/bluetooth/uuid.h>
+#include <zephyr/bluetooth/gatt.h>
+#include <zephyr/bluetooth/hci.h>
+#include <zephyr/sys/byteorder.h>
+#include <zephyr/init.h>
 
 #include <zephyr/logging/log.h>
 
@@ -26,7 +27,6 @@ LOG_MODULE_DECLARE(zmk, CONFIG_ZMK_LOG_LEVEL);
 #include <zmk/event_manager.h>
 #include <zmk/events/position_state_changed.h>
 #include <zmk/events/sensor_event.h>
-#include <init.h>
 
 static int start_scan(void);
 

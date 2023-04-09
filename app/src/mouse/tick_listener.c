@@ -85,6 +85,7 @@ static void mouse_tick_handler(const struct zmk_mouse_tick *tick) {
                                            tick->timestamp, tick->start_time);
     zmk_hid_mouse_movement_update((int16_t)CLAMP(move.x, INT16_MIN, INT16_MAX),
                                   (int16_t)CLAMP(move.y, INT16_MIN, INT16_MAX));
+
     struct vector2d scroll = update_movement(&scroll_remainder, &(tick->scroll_config),
                                              tick->max_scroll, tick->timestamp, tick->start_time);
     zmk_hid_mouse_scroll_update((int8_t)CLAMP(scroll.x, INT8_MIN, INT8_MAX),

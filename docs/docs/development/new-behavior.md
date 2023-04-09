@@ -337,7 +337,6 @@ if ((NOT CONFIG_ZMK_SPLIT) OR CONFIG_ZMK_SPLIT_ROLE_CENTRAL)
   target_sources(app PRIVATE src/behaviors/behavior_to_layer.c)
   target_sources(app PRIVATE src/behaviors/behavior_transparent.c)
   target_sources(app PRIVATE src/behaviors/behavior_none.c)
-  target_sources(app PRIVATE src/behaviors/behavior_sensor_rotate_key_press.c)
   target_sources(app PRIVATE src/combo.c)
   target_sources(app PRIVATE src/conditional_layer.c)
   target_sources(app PRIVATE src/keymap.c)
@@ -395,7 +394,6 @@ After creating the `.dtsi` from above, update `app/dts/behaviors.dtsi` to includ
 #include <behaviors/toggle_layer.dtsi>
 #include <behaviors/to_layer.dtsi>
 #include <behaviors/reset.dtsi>
-#include <behaviors/sensor_rotate_key_press.dtsi>
 #include <behaviors/rgb_underglow.dtsi>
 #include <behaviors/bluetooth.dtsi>
 #include <behaviors/ext_power.dtsi>
